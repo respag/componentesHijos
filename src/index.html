@@ -1,14 +1,43 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>ComponenteHijo</title>
+  <title>Componentes Hijos</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root></app-root>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Componente hijo que recibe información desde el Padre</h1>
+      <p>
+        Este es un ejemplo del uso de un componente hijo que recibe del padre el nombre de
+        un país y llena sus provincias y sus ciudades usando un archivo json
+      </p>
+    </div>
+    <p class="detalles">
+      En el primer caso el componente hijo recibe la información cuando el usuario selecciona un
+      país desde el DropDowList que lista todos los países diferentes leídos desde el archivo
+      Json.
+    </p>
+    <p>
+      Después se usan 3 diferentes instancias del componente hijo, a los que se les pasan un
+      país fijo: México, Venezuela e Italia, respectivamente
+    </p>
+    <hr>
+    <br>
+  <app-root></app-root> 
+  <br>
+  <p>
+      Como se ve, cada componente es independiente y muestra las provincias del país que se
+      le pasa desde el componente padre, y una vez elegida la provincia, en su segundo 
+      DropDownList, muestra las ciudades de esa provincia.
+    </p>
+</div>
 </body>
+
 </html>

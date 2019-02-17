@@ -1,0 +1,12 @@
+.footer{
+    background-color:darkblue;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size:10px;
+    font-style: italic;
+    margin:20px 60px 0 60px; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

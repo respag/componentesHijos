@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.jumbotron{
+    background-color: darkblue!important;
+    padding-bottom:5px!important;
+    padding-top:10px!important;
+    margin-top: 20px;
+    color:white;
+}
+
+body{
+    background-color:lightblue!important;
+}
