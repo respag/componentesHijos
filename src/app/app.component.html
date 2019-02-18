@@ -2,20 +2,21 @@
   <div class="row">
     <div class="col-md-4">
       <label for="selPais">Pais</label>
-      <select name="selPais" id="selPais" class="form-control" (change)="onSelectPais($event.target.value)">
+      <select name="selPais" id="selPais" class="form-control"  
+              (change)="onSelectPais($event.target.value)">
         <option value="0">-- Seleccione un país --</option>
         <option *ngFor="let p of paises | unique | orderBy" [value]="p">{{p}}</option>
       </select>
     </div>
     <div class="col-md-8">
-      <app-child [country]="pais" [provincias]='provincias'></app-child>
+      <app-child [country]="pais" [provincias]='provincias' (provChange)='displayProv($event)'></app-child>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-12">
       <strong>
-        <app-child [country]="'México'"></app-child>
+        <app-child [country]="'México'" (provChange)='displayProv($event)'></app-child>
       </strong>
     </div>
   </div>
@@ -23,15 +24,21 @@
   <div class="row">
     <div class="col-md-12">
       <strong>
-        <app-child [country]="'Venezuela'"></app-child>
+        <app-child [country]="'Venezuela'" (provChange)='displayProv($event)'></app-child>
       </strong>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-12">
-      <app-child [country]="'Italia'"></app-child>
+      <app-child [country]="'Italia'" (provChange)='displayProv($event)'></app-child>
     </div>
   </div>
+  <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h6 class="resultado"></h6>
+      </div>
+    </div>
 </div>
 <app-footer></app-footer>

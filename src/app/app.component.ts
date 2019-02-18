@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import SampleJson from '../assets/ciudades.json';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,10 @@ export class AppComponent implements OnInit {
         this.pais = pais;
       }
     });
-    console.log(`Provincias de ${pais}: ${this.provincias}`)
-}
+    console.log(`Provincias de ${pais}: ${this.provincias}`);
+  } 
+
+  displayProv(prov) {
+    $(".resultado").text(`Ha seleccionado la provincia de: ${prov}`);
+  }
 }

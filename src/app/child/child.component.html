@@ -1,17 +1,19 @@
-<div class="row">
-    <div class="col-md-6">
-        <label for="selProvincia">Provincia o Estado de <strong>{{ country }}</strong></label>
-        <select name="selProvincia" id="selProvincia" class="form-control"
-            (change)="onSelectProvincia($event.target.value)">
-            <option value="0">-- Seleccione un estado o provincia --</option>
-            <option *ngFor="let p of provincias | unique | orderBy" [value]="p">{{p}}</option>
-        </select>
-    </div>
-    <div class="col-md-6">
-        <label for="selCiudad"><strong>Ciudad</strong></label>
-        <select name="selCiudad" id="selCiudad" class="form-control">
-            <option value="0">-- Seleccione una ciudad --</option>
-            <option *ngFor="let c of ciudades | orderBy" [value]="c">{{c}}</option>
-        </select>
+<div class="componenteHijo">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="selProvincia">Provincia o Estado de <strong>{{ country }}</strong></label>
+            <select [attr.id]="idProv" class="form-control" 
+            (change)="onSelectProvincia($event.target.value);provinciaCambiada()">
+                <option value="0">-- Seleccione un estado o provincia --</option>
+                <option *ngFor="let p of provincias | unique | orderBy" [value]="p">{{p}}</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="selCiudad"><strong>Ciudad</strong></label>
+            <select [attr.id]="idCiudad" class="form-control">
+                <option value="0">-- Seleccione una ciudad --</option>
+                <option *ngFor="let c of ciudades | orderBy" [value]="c">{{c}}</option>
+            </select>
+        </div>
     </div>
 </div>

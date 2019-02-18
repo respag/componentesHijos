@@ -1,5 +1,13 @@
-.row{
+.componenteHijo{
     border:1px solid red;
     background-color: skyblue;
     padding-bottom: 10px;
+}
+
+.resultado{
+    padding-left:50px;
+}
+
+.pintado{
+    background-color:yellow;
 }
